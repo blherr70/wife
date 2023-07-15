@@ -1,0 +1,14 @@
+-
+  # Show Development message
+  showdevelopment: yes
+
+  # General Profile Details
+  firstname: Bryan
+  middlename: Scott
+  lastname: Herr
+  initials: BSH
+  pubphone: (720) 432-4377
+  cellphone: (605) 981-0025
+  email: bryan@bryanscott.ink
+  image: img/BSH_profile_20230316.jpeg
+

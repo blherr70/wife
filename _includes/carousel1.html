@@ -1,0 +1,7 @@
+
+{% assign i = 0 %}
+{% for slide in site.data.carousel %}
+
+     <p> {{ i }}</p>
+     {% assign i = i | plus:1 %}
+      {% endfor %}

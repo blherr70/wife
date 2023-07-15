@@ -1,0 +1,29 @@
+<div id="header-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-indicators">
+      {% assign i = 0 %}
+      {% for slide in site.data.carousel %}
+      <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="{{ i }}" {% if i == 0 %} class="active" {% endif %} aria-current="true" aria-label=""></button>
+      {% assign i = i | plus:1 %}
+      {% endfor %}
+    </div>
+    <div class="carousel-inner">
+    {% for slide in site.data.carousel %}
+    {{ slide.index }}
+        <div class="carousel-item active">
+            <img src="{{ slide.url }}" class="d-block w-100" alt="{{ slide.title }}">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>{{ slide.title }}</h5>
+                <p>{{ slide.text }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
